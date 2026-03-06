@@ -1,0 +1,17 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .tab-content { display: none; animation: fadeIn 0.5s ease-in-out; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .btn-nav { transition: all 0.3s; border-bottom: 4px solid transparent; }
+        #nav-tab-1.active { border-color: #22c55e; color: #16a34a; font-weight: 700; }
+        #nav-tab-2.active { border-color: #eab308; color: #ca8a04; font-weight: 700; }
+        #nav-tab-3.active { border-color: #ef4444; color: #dc2626; font-weight: 700; }
+        #nav-tab-4.active { border-color: #3b82f6; color: #2563eb; font-weight: 700; }
+
+        .code-block { background-color: #0f172a; color: #f8fafc; padding: 1.25rem; border-radius: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 1rem 0; }
+        .info-box { border-left: 4px solid #3b82f6; background-color: #eff6ff; padding: 1rem; margin: 1rem 0; }
+        
+      

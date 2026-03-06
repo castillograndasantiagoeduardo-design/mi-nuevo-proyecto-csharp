@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guía Integral C# Desktop - ADSO 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body>
+
+    <div class="max-w-6xl mx-auto p-4 md:p-10">
+        <header class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 mb-10 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-6">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.wtzJEU6Oe-Bvgz8qtVVABQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo SENA" class="h-20">
+                <div>
+                    <h1 class="text-3xl font-black tracking-tighter uppercase text-slate-800">Ruta De Aprendizaje C# Desktop</h1>
+                    <p class="text-slate-500 font-medium text-sm">Presentacion By: Santiago Castillo</p>
+                </div>
+            </div>
+            <div class="flex gap-4 mt-6 md:mt-0">
+                <img src="https://1000logos.net/wp-content/uploads/2020/08/Visual-Studio-Logo-720x450.png" alt="Visual Studio Logo" class="h-12">
+                <img src="https://th.bing.com/th/id/R.dcf13a6ba0f2ee7a3dfe46956174a808?rik=zj2hqs6GxCvGLA&pid=ImgRaw&r=0" alt="C# Logo" class="h-12">
+            </div>
+        </header>
+
+        <nav class="flex flex-wrap justify-between bg-white rounded-xl shadow-sm mb-10 overflow-hidden border border-slate-200">
+            <button onclick="switchTab('tab-1')" id="nav-tab-1" class="btn-nav flex-1 py-4 text-xs uppercase font-bold tracking-wider">Nivel 1: Básico</button>
+            <button onclick="switchTab('tab-2')" id="nav-tab-2" class="btn-nav flex-1 py-4 text-xs uppercase font-bold tracking-wider">Nivel 2: Intermedio</button>
+            <button onclick="switchTab('tab-3')" id="nav-tab-3" class="btn-nav flex-1 py-4 text-xs uppercase font-bold tracking-wider">Nivel 3: Productivo</button>
+            <button onclick="switchTab('tab-4')" id="nav-tab-4" class="btn-nav flex-1 py-4 text-xs uppercase font-bold tracking-wider bg-slate-50">Manual Visual Studio</button>
+        </nav>
+
+        <main>
+            <section id="tab-1" class="tab-content active">
+                <h2 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6 uppercase">Inducción - Primer contacto con C#</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="space-y-4 text-sm leading-relaxed text-slate-700">
+                        <p><strong>1. ¿Qué es C#?</strong> Lenguaje multiparadigma desarrollado por Microsoft para .NET, seguro y orientado a objetos.</p>
+                        <p><strong>2. ¿Qué es una aplicación de escritorio?</strong> Software local que interactúa directamente con los recursos del Sistema Operativo.</p>
+                        <p><strong>3. ¿Qué es Visual Studio?</strong> El IDE (Entorno de Desarrollo Integrado) profesional para construir soluciones .NET.</p>
+                        <p><strong>4. Crear un proyecto:</strong> Selección de plantilla "Windows Forms App" para iniciar la interfaz gráfica.</p>
+                        <p><strong>5. Entorno de Visual Studio:</strong> Explorador de soluciones, Cuadro de herramientas y Ventana de propiedades.</p>
+                        <p><strong>6. El formulario (Form):</strong> Clase base que representa la ventana física de la aplicación.</p>
+                    </div>
+                    <div>
+                        <div class="visual-placeholder">
+                           <img src="/imagenes-apoyo-visual/ayudavisual1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="font-bold text-green-600 uppercase text-xs mb-4">7. Controles y 8. Propiedades</h4>
+                        <ul class="text-xs space-y-3">
+                            <li><strong>Label:</strong> Texto descriptivo. <span class="text-slate-400 italic">(Propiedad: Text)</span></li>
+                            <li><strong>TextBox:</strong> Entrada de usuario. <span class="text-slate-400 italic">(Propiedad: Name)</span></li>
+                            <li><strong>Button:</strong> Activador de acciones. <span class="text-slate-400 italic">(Propiedad: Size)</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="font-bold text-green-600 uppercase text-xs mb-4">9. Eventos y 10. MessageBox</h4>
+                        <p class="text-xs text-slate-600">Programación dirigida por eventos: el código se ejecuta cuando el usuario hace clic. MessageBox es la herramienta principal para notificar estados.</p>
+                        <div class="code-block text-[10px]">
+                            MessageBox.Show("¡Primera aplicación funcional!");
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tab-2" class="tab-content">
+                <h2 class="text-2xl font-bold text-yellow-600 border-b-2 border-yellow-200 pb-2 mb-6 uppercase italic">Lógica y Formularios Funcionales</h2>
+                <div class="grid md:grid-cols-2 gap-10 text-sm">
+                    <div class="space-y-4 text-slate-700">
+                        <p><strong>1. Repaso:</strong> Consolidación de controles y diseño de Forms.</p>
+                        <p><strong>2. Variables y Tipos:</strong> int, double, string, bool.</p>
+                        <p><strong>3. Conversión de Datos:</strong> Métodos Parse y Convert.</p>
+                        <p><strong>4. Condicionales:</strong> Control de flujo con IF/ELSE.</p>
+                        <p><strong>5. Ciclos básicos:</strong> Estructuras For y While.</p>
+                        <p><strong>6. Validación:</strong> Evitar errores de tipo de dato o campos vacíos.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="visual-placeholder">
+                            <img src="/imagenes-apoyo-visual/ayudavisual2.png">
+                        </div>
+                        <p class="text-xs"><strong>10. Organización del código:</strong> Uso de regiones, comentarios técnicos y nombres descriptivos para mantener el código legible.</p>
+                    </div>
+                </div>
+                <div class="mt-6 bg-yellow-50 p-6 rounded-3xl border border-yellow-100 grid md:grid-cols-3 gap-6">
+                    <div class="text-xs">
+                        <h5 class="font-bold text-yellow-800 uppercase mb-2">7. Controles Extra</h5>
+                        <p>ComboBox, RadioButton, CheckBox.</p>
+                    </div>
+                    <div class="text-xs">
+                        <h5 class="font-bold text-yellow-800 uppercase mb-2">8. Manejo de Errores</h5>
+                        <p>Bloques Try / Catch para prevenir excepciones.</p>
+                    </div>
+                    <div class="text-xs">
+                        <h5 class="font-bold text-yellow-800 uppercase mb-2">9. Navegación</h5>
+                        <p>Instanciación y uso de múltiples formularios (.Show()).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tab-3" class="tab-content">
+                <h2 class="text-2xl font-bold text-red-700 border-b-2 border-red-200 pb-2 mb-6 uppercase">Enfoque Productivo y Proyecto Formativo</h2>
+                <div class="info-box italic text-xs mb-6">
+                    Objetivo: Desarrollar una aplicación estructurada, aplicando buenas prácticas y lógica real.
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                        <h4 class="font-bold text-red-600 uppercase text-xs">Arquitectura y Estructura</h4>
+                        <div class="text-[11px] space-y-3">
+                            <p><strong>1. Rol en el entorno:</strong> Importancia de C# en soluciones empresariales.</p>
+                            <p><strong>2. Estructura Completa:</strong> Organización de archivos y recursos.</p>
+                            <p><strong>6. Separación de Lógica:</strong> Uso de Capas Básicas (UI y Datos).</p>
+                        </div>
+                        <div class="visual-placeholder !min-h-[150px]">
+                            <img src="/imagenes-apoyo-visual/ayudavisual3.png">
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                        <h4 class="font-bold text-red-600 uppercase text-xs">Programación Avanzada</h4>
+                        <div class="text-[11px] space-y-3">
+                            <p><strong>3. Buenas Prácticas:</strong> Clean Code y modularidad.</p>
+                            <p><strong>4. Convenciones:</strong> PascalCase y camelCase.</p>
+                            <p><strong>5. Clases y Objetos:</strong> Modelado de entidades reales.</p>
+                            <p><strong>10. Persistencia:</strong> Listas genéricas y archivos.</p>
+                        </div>
+                        <div class="code-block !text-[9px]">
+                            public class Producto { ... }
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                        <h4 class="font-bold text-red-600 uppercase text-xs">Calidad y Entrega</h4>
+                        <div class="text-[11px] space-y-3">
+                            <p><strong>8. Validaciones:</strong> Lógica de negocio robusta.</p>
+                            <p><strong>9. Manejo de Errores:</strong> Gestión global de excepciones.</p>
+                            <p><strong>11. UX/UI:</strong> Diseño de interfaces funcionales.</p>
+                            <p><strong>12. Documentación:</strong> Manual técnico del proyecto.</p>
+                        </div>
+                        <div class="visual-placeholder !min-h-[150px]">
+                            <img src="/imagenes-apoyo-visual/ayudavisual4.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tab-4" class="tab-content">
+                <div class="bg-slate-900 text-white p-10 rounded-3xl">
+                    <h2 class="text-3xl font-light mb-8 italic">Manual de Visual Studio Community</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="space-y-10">
+                            <div class="flex gap-6">
+                                <span class="text-4xl font-bold text-blue-500">01</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Instalación</h4>
+                                    <p class="text-slate-400 text-sm">Seleccione la carga <strong>"Desarrollo de escritorio de .NET"</strong>. Sin esto, no verá las plantillas de Windows Forms.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <span class="text-4xl font-bold text-blue-500">02</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Nuevo Proyecto</h4>
+                                    <p class="text-slate-400 text-sm">Use el buscador: escriba "Windows Forms" y elija el proyecto para C#.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visual-placeholder border-slate-700 bg-slate-800">
+                            <IMG src="/imagenes-apoyo-visual/ayudavisual5.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-20 py-8 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.5em]">Santiago Castillo - Desarrollo de Software - SENA 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
